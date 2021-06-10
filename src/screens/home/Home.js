@@ -51,16 +51,13 @@ function SingleLineGridList() {
     </div>
   );
 }
-const url='';
 function TitlebarGridList() {
   return (
     <div className='root2'>
       <GridList cellHeight={350} className='gridList2' cols={4}>
         {moviesData.map((tile) => (
           <GridListTile key={tile.id}>
-            <a href={url}>
-              <img src={tile.poster_url} alt={tile.title} />
-            </a>
+            <img src={tile.poster_url} alt={tile.title} />
             <GridListTileBar
               title={tile.title}
               subtitle={<span>Release Date: {tile.release_date.substring(0,10)}</span>}
