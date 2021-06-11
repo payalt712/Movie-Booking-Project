@@ -4,9 +4,11 @@ import './index.css';
 import Home from './screens/home/Home';
 
 
+
+
 ReactDOM.render(
-  <>
-    <Home />
-  </>,
-  document.getElementById('root')
+<>
+<Home />
+</>
+    ,document.getElementById('root')
 );

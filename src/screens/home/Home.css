@@ -1,31 +1,54 @@
-body{
-    width:100%;
-}
-.upcoming-heading{
+#upcoming{
+    background-color: #ff9999;
     padding: 8px;
-    background-color: #ff999999;
     text-align: center;
     font-size: 1rem;
+}
+
+.movie-poster {
+    height: 200%;
     width: auto;
 }
-.flex-container{
-    margin:2%;
+.a{
+    height: 250 !important;
+}
+
+.released-movie-grid-item {
+    margin: 15px !important;
+}
+.movie-poster2{
+    height: 100%;
+    width: auto;
+
+}
+
+.flex-container {
     display: flex;
-    flex-direction: row;
 }
-.left{
-    width:76%;
-    margin-right:16px;
+
+.flex-container>div {
+    margin: 16px;
 }
-.gridList2{
-    width:100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.left {
+    width: 76%;
 }
-.gridList2>.MuiGridListTile-root{
-    margin:1%;
+.right {
+    padding-top: 20px;
+    width: 24%;
 }
-img:hover{
-    cursor: pointer;
-}
+
+
+@media (max-width: 992px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    .left {
+        width: 100%;
+    }
+    .right {
+        width: 90%;
+    }
+    .released-movie-grid-item {
+        margin: 8px;
+    }
+}  
