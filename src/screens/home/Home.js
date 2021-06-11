@@ -92,9 +92,9 @@ releaseDateEndHandler = event => {
   this.setState({ releaseDateEnd: event.target.value });
 }
 
-/*movieClickHandler = (movieId) => {
+movieClickHandler = (movieId) => {
   ReactDOM.render(<Details movieId={movieId} />, document.getElementById('root'));
-}*/
+}
 
 
   render() {
@@ -131,7 +131,8 @@ releaseDateEndHandler = event => {
             <div className="left">
             <GridList cellHeight={350} cols={4} className={classes.gridListMain}>
               {filterMovie.map((movie) => (
-                <GridListTile  
+                <GridListTile  onClick={() => this.movieClickHandler(movie.id)} className="released-movie-grid-item"
+                key={"grid" + movie.id}
                 >
                   <img
                     src={movie.poster_url}
